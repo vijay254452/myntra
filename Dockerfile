@@ -5,7 +5,7 @@ FROM tomcat:10.1-jdk17
 RUN rm -rf /usr/local/tomcat/webapps/*
 
 # Copy WAR file from target folder into ROOT.war
-COPY target/myntra-app.war /usr/local/tomcat/webapps/ROOT.war
+COPY target/myntra-app-1.0.0.war /usr/local/tomcat/webapps/ROOT.war
 
 # Expose port 8080
 EXPOSE 8080
