@@ -2,12 +2,19 @@ package com.myntra;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class MyntraApplication {
+public class MyntraApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
         SpringApplication.run(MyntraApplication.class, args);
+    }
+
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+        return builder.sources(MyntraApplication.class);
     }
 }
 
